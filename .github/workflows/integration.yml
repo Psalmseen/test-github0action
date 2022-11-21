@@ -1,0 +1,13 @@
+name: Merging
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checks-out
+        uses: actions/checkout@v3
