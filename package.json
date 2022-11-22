@@ -1,0 +1,22 @@
+{
+  "name": "github-action",
+  "version": "1.0.0",
+  "description": "Checks github action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psalmseen/test-github0action.git"
+  },
+  "keywords": [
+    "Github-actions"
+  ],
+  "author": "Psalmseen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Psalmseen/test-github0action/issues"
+  },
+  "homepage": "https://github.com/Psalmseen/test-github0action#readme"
+}
