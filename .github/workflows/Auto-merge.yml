@@ -9,6 +9,11 @@ on:
       - 'Merging'
 
 jobs:
+  create-PR:
+    name: Automatically Create Pull Requests
+    uses: BaharaJr/create-pr@0.0.1
+    with:
+      GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
   merge-me:
     name: Merge me!
     runs-on: ubuntu-latest
@@ -18,6 +23,7 @@ jobs:
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         name: Merge me!
         uses: ridedott/merge-me-action@v2
+
         with:
           # Depending on branch protection rules, a  manually populated
           # `GITHUB_TOKEN_WORKAROUND` secret with permissions to push to
