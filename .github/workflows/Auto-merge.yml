@@ -1,8 +1,10 @@
-name: auto merge action
+name: Auto merge
 on:
-  pull_request_review:
+  workflow_run:
     types:
-      - submitted
+      - 'completed'
+    workflows:
+      - 'Merging'
 jobs:
   autoMerge:
     runs-on: ubuntu-latest
