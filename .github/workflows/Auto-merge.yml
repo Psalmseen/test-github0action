@@ -9,15 +9,26 @@ on:
       - 'Merging'
 
 jobs:
+  create-PR:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Automatically Create Pull Requests
+        uses: BaharaJr/create-pr@0v.0.1
+        with:
+          GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+          DESTINATION_BRANCH: main
+          KEYWORD: 'create_pr'
   merge-me:
     name: Merge me!
     runs-on: ubuntu-latest
+    needs: create-PR
     steps:
       - # It is often a desired behavior to merge only when a workflow execution
         # succeeds. This can be changed as needed.
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         name: Merge me!
         uses: ridedott/merge-me-action@v2
+
         with:
           # Depending on branch protection rules, a  manually populated
           # `GITHUB_TOKEN_WORKAROUND` secret with permissions to push to
