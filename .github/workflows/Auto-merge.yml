@@ -21,6 +21,7 @@ jobs:
   merge-me:
     name: Merge me!
     runs-on: ubuntu-latest
+    needs: create-PR
     steps:
       - # It is often a desired behavior to merge only when a workflow execution
         # succeeds. This can be changed as needed.
