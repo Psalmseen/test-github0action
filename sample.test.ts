@@ -5,5 +5,5 @@ it('is a sample', () => {
   expect(true).toBeTruthy();
   expect(true).toBeTruthy();
   expect(true).toBeTruthy();
-  expect(1).toBeGreaterThan(0);
+  expect(1).toBeGreaterThan(10);
 });
