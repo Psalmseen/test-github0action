@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN}}
           method: 'merge'
-          labels: '[ "Completed", "Merges" ]'
+          labels: '[ "Merge", "Completed" ]'
           title: 'commit title'
           message: 'commit message'
       - name: result
