@@ -9,15 +9,6 @@ on:
       - 'Merging'
 
 jobs:
-  create-PR:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Automatically Create Pull Requests
-        uses: BaharaJr/create-pr@0v.0.1
-        with:
-          GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
-          DESTINATION_BRANCH: main
-          KEYWORD: 'create_pr'
   merge-me:
     name: Merge me!
     runs-on: ubuntu-latest
