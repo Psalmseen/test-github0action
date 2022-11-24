@@ -21,12 +21,11 @@ jobs:
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
   merge-me:
-    name: Merge me!
+    name: creat PR!
     runs-on: ubuntu-latest
     steps:
-      - if: ${{github.event.workflow_run.conclusion == 'success'}}
-        uses: BaharaJr/create-pr@0.0.1
+      - uses: BaharaJr/create-pr@0.0.1
         with:
           GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
           DESTINATION_BRANCH: main
-          KEYWORD: 'create_pr'
+          KEYWORD: pullrequest
