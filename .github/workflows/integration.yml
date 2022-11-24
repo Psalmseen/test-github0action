@@ -25,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - if: ${{github.event.workflow_run.conclusion == 'success'}}
-        name: Merge
-        uses: ridedott/merge-me-action@v2
-        with: GITHUB_TOKEN:${{secrets.GITHUB_TOKEN}}
+        uses: BaharaJr/create-pr@0.0.1
+        with:
+          GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+          DESTINATION_BRANCH: main
+          KEYWORD: 'create_pr'
