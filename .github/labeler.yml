@@ -1,2 +1,0 @@
-complete: -./*.test.ts
-merge: -any:['*.ts']
