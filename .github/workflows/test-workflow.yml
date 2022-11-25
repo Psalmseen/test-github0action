@@ -1,0 +1,29 @@
+name: Test
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checks-out
+        uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm i
+      - name: test
+        run: npm run test
+      - name: run coverage
+        run: npm run coverage
+
+  test-metrics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: PR Metrics
+        uses: microsoft/PR-Metrics@v1.4.7
+        env:
+          PR_METRICS_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        continue-on-error: true
