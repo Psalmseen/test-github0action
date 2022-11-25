@@ -5,7 +5,7 @@ on:
       - '**'
       - '!main'
 jobs:
-  checkout:
+  test:
     runs-on: ubuntu-latest
 
     steps:
