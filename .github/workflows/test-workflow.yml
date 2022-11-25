@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checks-out
         uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm i
       - name: test
         run: npm run test
