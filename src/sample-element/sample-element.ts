@@ -46,7 +46,7 @@ export class SampleElement extends LitElement {
       'Turkey',
       'South Africa',
     ];
-    return countries[Math.floor(Math.random() * 23)];
+    return countries[Math.floor(Math.random() * 22)];
   }
 
   deleteUser(id: number) {
