@@ -1,5 +1,5 @@
 node_modules
-coverage/temp
+coverage/tmp
 coverage/lcov-report
 dist
 public
