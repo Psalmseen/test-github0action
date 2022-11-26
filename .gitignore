@@ -1,5 +1,6 @@
 node_modules
-coverage
+coverage/temp
+coverage/lcov-report
 dist
 public
 types
