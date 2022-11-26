@@ -13,6 +13,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: run test
+        run: npm run coverage
+
       - name: PR Metrics
         uses: microsoft/PR-Metrics@v1.4.7
         env:
