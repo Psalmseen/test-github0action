@@ -1,0 +1,11 @@
+node_modules
+coverage
+dist
+public
+types
+.scannerwork
+sonar-scanner
+bin
+conf
+jre
+lib
