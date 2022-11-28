@@ -3,7 +3,7 @@ coverage
 dist
 public
 types
-.scannerwork
+.scannerwork/*
 sonar-scanner
 bin
 conf
