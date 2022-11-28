@@ -36,7 +36,7 @@ jobs:
         run: npm run coverage
 
       - name: sonarqube scan
-        run: sonar-scanner.bat -D"sonar.projectKey=sample" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_2944a3447be64ae323654881715eb4f8eaaa0b0d"
+        run: ./sonar-scanner/bin/sonar-scanner.bat -D"sonar.projectKey=sample" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_2944a3447be64ae323654881715eb4f8eaaa0b0d"
       #   uses: SonarSource/sonarqube-scan-action@master
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
