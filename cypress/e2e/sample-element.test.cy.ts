@@ -12,7 +12,7 @@ describe('The sample element', () => {
   it('inputs the last name', () => {
     cy.get('[data-testId=lastName]')
       .should('exist')
-      .focus()
+      .click()
       .type('Adeniyi', { delay: 100 });
   });
   it('adds a user', () => {
