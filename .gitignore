@@ -3,9 +3,9 @@ coverage
 dist
 public
 types
-# sonar-scanner
+sonar-scanner
 .scannerwork
-# bin
-# conf
-# jre
-# lib
+bin
+conf
+jre
+lib
