@@ -3,8 +3,8 @@ coverage
 dist
 public
 types
-sonar-scanner
 .scannerwork
+sonar-scanner
 bin
 conf
 jre
