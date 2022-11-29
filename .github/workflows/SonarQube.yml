@@ -17,7 +17,7 @@ on:
 jobs:
   sonarqube:
     name: sonarqube
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     # ${{ matrix.os}}
     # strategy:
     #   matrix:
@@ -34,7 +34,10 @@ jobs:
 
       - name: run test coverage
         run: npm run coverage
-
+      - name: pull sonarqube image
+        run: docker pull sonarqube
+      - name: create a docker cntainer
+        run: docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
       - name: sonarqube scan
         uses: SonarSource/sonarqube-scan-action@master
         env:
