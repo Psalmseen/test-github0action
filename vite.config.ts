@@ -17,7 +17,11 @@ export default defineConfig({
     environment: 'happy-dom',
     globals: true,
     coverage: {
-      reporter: ['text', 'lcov'],
+      reporter: ['text', 'lcov', 'json', 'json-summary'],
+      lines: 90,
+      branches: 90,
+      functions: 90,
+      statements: 90,
     },
   },
   plugins: [
