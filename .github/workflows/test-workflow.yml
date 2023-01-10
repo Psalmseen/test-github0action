@@ -18,12 +18,14 @@ jobs:
       - name: run coverage
         run: npm run coverage
       - name: send coverage report
-        uses: zgosalvez/github-actions-report-lcov@v1
-        with:
-          coverage-files: coverage/lcov.*.info
-          minimum-coverage: 90
-          artifact-name: code-coverage-report
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        uses: ShaunBulbrook/jest-coverage-report-on-commit@0.1.0
+
+        # uses: zgosalvez/github-actions-report-lcov@v1
+        # with:
+        #   coverage-files: coverage/lcov.*.info
+        #   minimum-coverage: 90
+        #   artifact-name: code-coverage-report
+        #   github-token: ${{ secrets.GITHUB_TOKEN }}
 
         # uses: vebr/jest-lcov-reporter@v0.2.0
         # with:
