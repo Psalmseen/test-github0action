@@ -20,3 +20,5 @@ jobs:
       - name: Report Coverage
         if: always()
         uses: davelosert/vitest-coverage-report-action@v1
+        with:
+          vite-config-path: ./vite.config.ts
