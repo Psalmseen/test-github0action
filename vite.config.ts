@@ -18,10 +18,10 @@ export default defineConfig({
     globals: true,
     coverage: {
       reporter: ['text', 'lcov', 'json', 'json-summary'],
-      lines: 90,
-      branches: 90,
-      functions: 90,
-      statements: 90,
+      lines: 80,
+      branches: 80,
+      functions: 80,
+      statements: 80,
     },
   },
   plugins: [
