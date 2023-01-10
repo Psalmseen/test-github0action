@@ -18,8 +18,7 @@ jobs:
       - name: run coverage
         run: npm run coverage
       - name: send coverage report
-        uses: manarbenkraouda/lcov-reporter-action@v0.3.5.3
+        uses: romeovs/lcov-reporter-action@v0.2.16
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
-          hide-table: false
+          title: 'Coverage report'
