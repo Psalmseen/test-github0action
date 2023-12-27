@@ -13,7 +13,9 @@ beforeAll(async () => {
 const getSampleElement = () =>
   document.querySelector('sample-element') as SampleElement;
 const getSampleElementElements = (selector: string) =>
-  getSampleElement()?.shadowRoot?.querySelectorAll(selector);
+  getSampleElement()?.shadowRoot?.querySelectorAll(
+    selector
+  ) as NodeListOf<HTMLElement>;
 
 describe('The behaviour of the sample element', () => {
   it('checks if the element is properly loaded', () => {
@@ -26,6 +28,9 @@ describe('The behaviour of the sample element', () => {
     expect(getSampleElement().generateCountry()).toBeTypeOf('string');
   });
   it('checks the handleNameInput function', () => {
+    getSampleElementElements('input')[1].dispatchEvent(
+      new CustomEvent('input')
+    );
     getSampleElement().handleNameInput(
       { target: { value: 'Samson' } },
       'firstName'
